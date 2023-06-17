@@ -9,7 +9,7 @@ function MainHeader({ searchValue, onSearch }) {
 				<input
 					onChange={onSearch}
 					value={searchValue}
-					className='mt-4 mr-1 w-38 h-9 text-slate-400 pl-2 text-sm focus:outline-none border-2 rounded-md'
+					className='mt-2 mr-1 w-38 h-9 text-slate-400 pl-2 text-sm focus:outline-none border-2 rounded-md'
 					type='text'
 					placeholder='Поиск...'
 				/>
