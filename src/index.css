@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+@font-face {
+	font-family: 'JetBrains mono';
+	src: url('./fonts/JetBrainsMono-Bold.ttf') format('truetype');
+	src: url('./fonts/JetBrainsMono-Light.ttf') format('truetype');
+	src: url('./fonts/JetBrainsMonoNL-SemiBold.ttf') format('truetype');
+	src: url('./fonts/JetBrainsMonoNL-Medium.ttf') format('truetype');
+	src: url('./fonts/JetBrainsMono-Regular.ttf') format('truetype');
+}
 
 * {
-    font-family: "JetBrains mono", sans-serif;
+	font-family: 'JetBrains mono', sans-serif;
 }
