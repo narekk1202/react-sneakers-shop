@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "/public/images/logo.png";
-import basket from "/public/images/basket.png";
+import logo from "/public/static/images/logo.png";
+import basket from "/public/static/images/basket.png";
 
 function Header({ setOpen }) {
   return (
