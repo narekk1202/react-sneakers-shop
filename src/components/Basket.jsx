@@ -7,6 +7,10 @@ function Basket({ open, setOpen, cartItems, setCartItems }) {
 		setCartItems(cartItems.filter(items => items.id !== id))
 	}
 
+	const deleteAllItems = () => {
+		setCartItems([])
+	}
+
 	const totalPrice = cartItems.reduce((sum, obj) => obj.price + sum, 0)
 
 	return (
@@ -102,6 +106,13 @@ function Basket({ open, setOpen, cartItems, setCartItems }) {
 													<div className='flex items-start justify-between'>
 														<Dialog.Title className='text-lg font-medium text-gray-900'>
 															Корзина
+															<button
+																onClick={deleteAllItems}
+																type='button'
+																className='font-medium mt-2 ml-9 text-indigo-600 hover:text-indigo-500'
+															>
+																Очистить корзину
+															</button>
 														</Dialog.Title>
 														<div className='ml-3 flex h-7 items-center'>
 															<button
