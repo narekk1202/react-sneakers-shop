@@ -4,6 +4,7 @@ import Cards from './Cards'
 import MainHeader from './MainHeader'
 
 function Main({ sneakers, searchValue, onSearch, onAddToCart }) {
+
 	return (
 		<div className='w-4/6 h-auto mb-16 bg-white rounded-2xl mt-5 flex flex-col items-center'>
 			<MainHeader searchValue={searchValue} onSearch={onSearch} />
@@ -19,6 +20,7 @@ function Main({ sneakers, searchValue, onSearch, onAddToCart }) {
 								image={items.image}
 								title={items.title}
 								price={items.price}
+								quantity={items.quantity}
 								id={nanoid()}
 								onPlus={obj => onAddToCart(obj)}
 							/>
