@@ -1,5 +1,4 @@
 import React from 'react'
-import CardCounter from './CardCounter'
 
 function BasketItems({ cartItems, deleteBasketItems }) {
 
@@ -28,7 +27,6 @@ function BasketItems({ cartItems, deleteBasketItems }) {
             </div>
           </div>
           <div className="flex items-start flex-col text-sm">
-            <CardCounter cartItems={cartItems} />
             <div className="flex">
               <button
                 onClick={() =>
