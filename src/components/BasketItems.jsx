@@ -33,7 +33,7 @@ function BasketItems({ cartItems, deleteBasketItems }) {
                   deleteBasketItems(cartItems.id)
                 }
                 type="button"
-                className="font-medium mt-3
+                className="font-medium text-md mt-2
                text-indigo-600 hover:text-indigo-500"
               >
                 Удалить
