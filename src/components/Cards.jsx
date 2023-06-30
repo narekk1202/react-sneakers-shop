@@ -16,7 +16,7 @@ function Cards({ image, title, price, id, quantity, onPlus }) {
 						onClick={onAddClicked}
 						className=' ml-16 mt-3 cursor-pointer active:bg-transparent hover:bg-black hover:text-white transition w-7 h-7 rounded-md border-2 border-black flex items-center justify-center'
 					>
-						+
+						✚
 					</div>
 				</div>
 			</div>
