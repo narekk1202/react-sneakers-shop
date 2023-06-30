@@ -28,16 +28,16 @@ function BasketItems({ cartItems, deleteBasketItems }) {
           </div>
           <div className="flex items-start flex-col text-sm">
             <div className="flex">
-              <button
+              <p
                 onClick={() =>
                   deleteBasketItems(cartItems.id)
                 }
                 type="button"
                 className="font-medium text-md mt-2
-               text-indigo-600 hover:text-indigo-500"
+               text-indigo-600 hover:text-indigo-500 cursor-pointer"
               >
                 Удалить
-              </button>
+              </p>
             </div>
           </div>
         </div>
