@@ -52,7 +52,7 @@ function Home() {
 				<Loading />
 			) : (
 				<>
-					<Header setOpen={setOpen} />
+					<Header setOpen={setOpen} cartItems={cartItems} />
 					<Main
 						onAddToCart={onAddToCart}
 						sneakers={data}
