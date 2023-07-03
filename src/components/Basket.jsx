@@ -122,6 +122,7 @@ function Basket({ open, setOpen, cartItems, setCartItems }) {
 															>
 																Очистить корзину
 															</p>
+															<p className=''>Товаров в корзине: {cartItems.length}</p>
 														</Dialog.Title>
 														<div className='ml-3 flex h-7 items-center'>
 															<p
