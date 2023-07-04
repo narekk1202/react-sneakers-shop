@@ -7,9 +7,9 @@ import Header from '../components/Header'
 import Loading from '../components/Loading'
 import Main from '../components/Main'
 
-const fetchData = async () => {
+export const fetchData = async (endpoint) => {
 	const res = await axios.get(
-		'https://644f97dbba9f39c6ab675407.mockapi.io/sneakers'
+		`https://644f97dbba9f39c6ab675407.mockapi.io/${endpoint}`
 	)
 	return res.data
 }
@@ -28,7 +28,7 @@ function Home() {
 
 	const { data, isLoading, error } = useQuery({
 		queryKey: ['fetchData'],
-		queryFn: fetchData,
+		queryFn: () => fetchData("sneakers"),
 	})
 
 	const onSearch = e => {
