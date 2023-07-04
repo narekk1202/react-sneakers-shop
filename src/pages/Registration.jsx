@@ -31,7 +31,7 @@ function Registration() {
 			onSubmit={e => e.preventDefault()}
 			className='w-full h-screen flex justify-center items-center flex-col'
 		>
-			<p className='text-xl mb-10'>Создание аккаута</p>
+			<p className='text-xl mb-10'>Создать аккаунт</p>
 			<div className='flex items-start flex-col'>
 				<label className='text-sm'>Email:</label>
 				<input
