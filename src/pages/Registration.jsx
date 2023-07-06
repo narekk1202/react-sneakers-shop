@@ -47,6 +47,8 @@ function Registration() {
 			} catch (err) {
 				console.log(err)
 			}
+		} else {
+			alert("Заполните все поля!")
 		}
 	}
 
