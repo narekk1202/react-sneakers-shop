@@ -9,20 +9,44 @@ function Registration() {
 
 	const navigate = useNavigate()
 
-	const signIn = () => {
+	const checkUser = async username => {
+		try {
+			const isDataExists = await axios.get(
+				`https://644f97dbba9f39c6ab675407.mockapi.io/userData?email=${username}`
+			)
+			return isDataExists.data.length > 0
+		} catch (err) {
+			console.log(err)
+			return false
+		}
+	}
+	const signIn = async username => {
 		if (email !== '' && password !== '' && password === secondPassword) {
 			try {
-				axios.post('https://644f97dbba9f39c6ab675407.mockapi.io/userData', {
-					email: email,
-					password: password,
-				})
+				const userExists = await checkUser(username)
+				if (!userExists) {
+					try {
+						setEmail('')
+						setPassword('')
+						setSecondPassword('')
+						await axios.post(
+							'https://644f97dbba9f39c6ab675407.mockapi.io/userData',
+							{
+								email: email,
+								password: password,
+							}
+						)
+					} catch (err) {
+						console.log(err)
+					}
+
+					navigate('/login')
+				} else {
+					alert('Такой пользователь уже существует. Введите другие данные.')
+				}
 			} catch (err) {
 				console.log(err)
 			}
-			setEmail('')
-			setPassword('')
-			setSecondPassword('')
-			navigate('/login')
 		}
 	}
 
@@ -62,7 +86,7 @@ function Registration() {
 				/>
 			</div>
 			<button
-				onClick={signIn}
+				onClick={() => signIn(email)}
 				type='submit'
 				className='mt-5 w-[85px] h-[35px] bg-blue-500 border-2 border-blue-500 text-white rounded-md transition hover:bg-transparent hover:border-2 hover:text-blue-500'
 			>
