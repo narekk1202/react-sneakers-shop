@@ -15,12 +15,15 @@ function LoginPage({ setIsAuth }) {
 
 	function signIn() {
 		if (email !== '' && password !== '') {
-			data.forEach(data => {
-				if (data.email === email && data.password === password) {
-					setIsAuth(true)
-					navigate('/order')
-				}
-			})
+			const user = data.find(
+				data => data.email === email && data.password === password
+			)
+			if (user) {
+				setIsAuth(true)
+				navigate('/order')
+			} else {
+				alert('Данные введены неправильно')
+			}
 		} else {
 			alert('Данные пусты или введены неправильно!')
 		}
