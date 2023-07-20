@@ -11,7 +11,7 @@ function Main({ sneakers, searchValue, onSearch, onAddToCart }) {
 			<div className=' w-11/12 mb-12 h-auto mt-12 flex flex-wrap justify-center items-center'>
 				{sneakers
 					?.filter(item =>
-						item.title.toLowerCase().includes(searchValue.toLowerCase())
+						item.title?.toLowerCase().includes(searchValue?.toLowerCase())
 					)
 					.map(items => {
 						return (
